@@ -4,7 +4,7 @@ class servicemix::servicemix {
   $pn = "apache-servicemix"
   $p = "${pn}-${pv}"
   $archive = "${p}.tar.gz"
-  $source = "http://mirrors.ircam.fr/pub/apache/servicemix/servicemix-4/${pv}/${archive}"
+  $source = "http://archive.apache.org/dist/servicemix/servicemix-4/${pv}/${archive}"
   $user = 'vagrant'
   $group = 'vagrant'
 
