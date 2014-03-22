@@ -1,5 +1,6 @@
 class servicemix::servicemix {
   $install_dir = "/opt"
+  $software_dir = "/software"
   $pv = "4.5.3"
   $pn = "apache-servicemix"
   $p = "${pn}-${pv}"
@@ -14,7 +15,7 @@ class servicemix::servicemix {
     require      => File[$install_dir];
   } ->
   exec { 'smx-untar':
-    command      => "tar zxf ${install_dir}/${archive}",
+    command      => "tar zxf ${software_dir}/${archive}",
     cwd          => "${install_dir}",
     creates      => "${install_dir}/${p}",
     user         => $user;
