@@ -11,8 +11,8 @@ class servicemix::servicemix {
 
   wget::fetch { 'fetch-smx':
     source       => $source,
-    destination  => "${install_dir}/${archive}",
-    require      => File[$install_dir];
+    destination  => "${software_dir}/${archive}",
+    require      => File[$software_dir];
   } ->
   exec { 'smx-untar':
     command      => "tar zxf ${software_dir}/${archive}",
